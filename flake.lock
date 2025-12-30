@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1766902085,
+        "narHash": "sha256-coBu0ONtFzlwwVBzmjacUQwj3G+lybcZ1oeNSQkgC0M=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "polybar-calendar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664179024,
+        "narHash": "sha256-pjQRVayhyzLEHbCt+ZbMcbDZ72FsruCDsjhpu9ht6C8=",
+        "owner": "nevarman",
+        "repo": "polybar-calendar",
+        "rev": "eb3eb5dafe7add62c0408582985bdc53a59b692b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nevarman",
+        "repo": "polybar-calendar",
+        "type": "github"
+      }
+    },
+    "polybar-scripts": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1758698806,
+        "narHash": "sha256-u2u/eAoe4ryMjauby0YESujSWzyraIjf4TrRsj+tQnM=",
+        "owner": "polybar",
+        "repo": "polybar-scripts",
+        "rev": "d045caa277ab904ca10ffdee4173b6e10c59c298",
+        "type": "github"
+      },
+      "original": {
+        "owner": "polybar",
+        "repo": "polybar-scripts",
+        "type": "github"
+      }
+    },
+    "polybar-spotify": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713170345,
+        "narHash": "sha256-9EAjsZ+i+Zs4iyybkRAHtL44jBzcG9m3ZpFXhhglL2k=",
+        "owner": "PrayagS",
+        "repo": "polybar-spotify",
+        "rev": "8f415ed803e4db889959556d9e2749878f7eb7f7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PrayagS",
+        "repo": "polybar-spotify",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "polybar-calendar": "polybar-calendar",
+        "polybar-scripts": "polybar-scripts",
+        "polybar-spotify": "polybar-spotify"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
