@@ -76,7 +76,7 @@ in
   };
 
 
-  stylix.image = ./dotfiles/user-wallpapers/wp12329536-nixos-wallpapers.png;
+  # stylix.image = ./dotfiles/user-wallpapers/wp12329536-nixos-wallpapers.png;
 
   stylix.targets = {
     i3.enable = false;
