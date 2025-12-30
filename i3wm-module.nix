@@ -17,7 +17,7 @@ in
   imports = [
     ./i3wm-config/i3-config.nix
     ./i3wm-config/polybar.nix
-    ./i3wm-config/i3-rofi.nix.nix
+    ./i3wm-config/i3-rofi.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -72,8 +72,17 @@ in
     # '';
   };
 
+
+  stylix.image = ./dotfiles/user-wallpapers/wp12329536-nixos-wallpapers.png;
+
   stylix.targets = {
     i3.enable = false;
     rofi.enable = false;
+  };
+
+  stylix.cursor = {
+    package = pkgs.catppuccin-cursors.frappeDark;
+    name = "catppuccin-frappe-dark-cursors";
+    size = 25;
   };
 }
