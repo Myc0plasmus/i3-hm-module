@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of myc0plasmus";
+  description = "Home Manager i3 configuration of myc0plasmus";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
