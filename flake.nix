@@ -2,8 +2,7 @@
   description = "Home Manager i3 configuration of myc0plasmus";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:/nixos/nixpkgs?ref=nixos-unstable";
+    # nixpkgs.url = "github:/nixos/nixpkgs?ref=nixos-unstable"; # Technically not needed, nixpkgs not used directly
     polybar-spotify = {
       url = "github:PrayagS/polybar-spotify";
       flake = false;

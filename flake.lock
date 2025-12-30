@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "nixpkgs": {
-      "locked": {
-        "lastModified": 1766902085,
-        "narHash": "sha256-coBu0ONtFzlwwVBzmjacUQwj3G+lybcZ1oeNSQkgC0M=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "polybar-calendar": {
       "flake": false,
       "locked": {
@@ -66,7 +50,6 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
         "polybar-calendar": "polybar-calendar",
         "polybar-scripts": "polybar-scripts",
         "polybar-spotify": "polybar-spotify"
