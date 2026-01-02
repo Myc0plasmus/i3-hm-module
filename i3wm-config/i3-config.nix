@@ -1,5 +1,6 @@
 {
   config,
+  home_username,
   pkgs,
   lib,
   ...
@@ -22,8 +23,111 @@ let
   wh = "#ffffff";
 
   # vars
-  fm = "None-1";
-  sm = "HDMI-1";
+  userDisplays = {
+    cordyceps = {
+      fm="DP-2";
+      sm="HDMI-1";
+      tm="HDMI-0";
+    };
+    myc0plasmus = {
+      fm="eDP-1";
+      sm="HDMI-1";
+      tm="";
+    };
+  };
+  fm = userDisplays.${home_username}.fm;
+  sm = userDisplays.${home_username}.sm;
+  tm = userDisplays.${home_username}.tm;
+
+  userDisplayConfig = {
+    cordyceps = [
+      {
+        workspace = "1";
+        output = fm;
+      }
+      {
+        workspace = "2";
+        output = sm;
+      }
+      {
+        workspace = "3";
+        output = fm;
+      }
+      {
+        workspace = "4";
+        output = sm;
+      }
+      {
+        workspace = "5";
+        output = tm;
+      }
+      {
+        workspace = "6";
+        output = sm;
+      }
+      {
+        workspace = "7";
+        output = fm;
+      }
+      {
+        workspace = "8";
+        output = sm;
+      }
+      {
+        workspace = "9";
+        output = fm;
+      }
+      {
+        workspace = "10";
+        output = sm;
+      }
+    ];
+
+    myc0plasmus = [
+      {
+        workspace = "1";
+        output = sm;
+      }
+      {
+        workspace = "2";
+        output = fm;
+      }
+      {
+        workspace = "3";
+        output = sm;
+      }
+      {
+        workspace = "4";
+        output = fm;
+      }
+      {
+        workspace = "5";
+        output = sm;
+      }
+      {
+        workspace = "6";
+        output = fm;
+      }
+      {
+        workspace = "7";
+        output = sm;
+      }
+      {
+        workspace = "8";
+        output = fm;
+      }
+      {
+        workspace = "9";
+        output = sm;
+      }
+      {
+        workspace = "10";
+        output = fm;
+      }
+    ];
+
+  };
+
   Left = "h";
   Down = "j";
   Up = "k";
@@ -86,48 +190,8 @@ in
   xsession.windowManager.i3 = {
     enable = true;
     config = rec {
-      workspaceOutputAssign = [
-        {
-          workspace = "1";
-          output = sm;
-        }
-        {
-          workspace = "2";
-          output = fm;
-        }
-        {
-          workspace = "3";
-          output = sm;
-        }
-        {
-          workspace = "4";
-          output = fm;
-        }
-        {
-          workspace = "5";
-          output = sm;
-        }
-        {
-          workspace = "6";
-          output = fm;
-        }
-        {
-          workspace = "7";
-          output = sm;
-        }
-        {
-          workspace = "8";
-          output = fm;
-        }
-        {
-          workspace = "9";
-          output = sm;
-        }
-        {
-          workspace = "10";
-          output = fm;
-        }
-      ];
+      workspaceOutputAssign = userDisplayConfig.${home_username};
+      
       gaps = {
         smartGaps = true;
         smartBorders = "off";
@@ -245,7 +309,7 @@ in
       };
       startup = [
         {
-          command = "monitorScript && resetWallpaperLock && sleep 1 && launchPolybar";
+          command = "monitorScript ${home_username} && resetWallpaperLock && sleep 1 && launchPolybar";
           always = true;
           notification = false;
         }
