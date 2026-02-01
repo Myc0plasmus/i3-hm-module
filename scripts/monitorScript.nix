@@ -51,8 +51,8 @@ pkgs.writeShellScriptBin "monitorScript" ''
 
 
     if is_connected "$BIG_DP"; then
-        xrandr \
-            --output "$BIG_DP" --auto --left-of "$DUMMY"
+        # xrandr \
+            # --output "$BIG_DP" --auto --left-of "$DUMMY"
 
         if is_connected "$SMALL_HDMI"; then
             xrandr \
