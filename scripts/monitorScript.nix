@@ -46,7 +46,9 @@ pkgs.writeShellScriptBin "monitorScript" ''
     SMALL_HDMI="HDMI-1"   # small screen
 
     # Always bring up dummy as primary
-    xrandr --output "$DUMMY" --auto --primary
+    # xrandr --output "$DUMMY" --auto --primary
+    xrandr --output "$DUMMY" --off
+
 
     if is_connected "$BIG_DP"; then
         xrandr \
