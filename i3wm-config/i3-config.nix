@@ -190,7 +190,7 @@ in
   xsession.windowManager.i3 = {
     enable = true;
     config = rec {
-      workspaceOutputAssign = userDisplayConfig.${home_username};
+      workspaceOutputAssign = userDisplayConfig.${protoHost.username};
       
       gaps = {
         smartGaps = true;
@@ -309,7 +309,7 @@ in
       };
       startup = [
         {
-          command = "monitorScript ${home_username} && resetWallpaperLock && sleep 1 && launchPolybar";
+          command = "monitorScript ${protoHost.username} && resetWallpaperLock && sleep 1 && launchPolybar";
           always = true;
           notification = false;
         }
