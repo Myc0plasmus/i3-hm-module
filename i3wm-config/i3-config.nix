@@ -1,6 +1,6 @@
 {
   config,
-  home_username,
+  protoHost,
   pkgs,
   lib,
   ...
@@ -35,9 +35,9 @@ let
       tm="";
     };
   };
-  fm = userDisplays.${home_username}.fm;
-  sm = userDisplays.${home_username}.sm;
-  tm = userDisplays.${home_username}.tm;
+  fm = userDisplays.${protoHost.username}.fm;
+  sm = userDisplays.${protoHost.username}.sm;
+  tm = userDisplays.${protoHost.username}.tm;
 
   userDisplayConfig = {
     cordyceps = [
