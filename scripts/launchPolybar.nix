@@ -8,7 +8,7 @@ pkgs.writeShellScriptBin "launchPolybar" ''
   ${pkgs.killall}/bin/killall -q polybar
 
   if type "xrandr"; then
-    for m in $(${pkgs.xorg.xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
+    for m in $(${pkgs.xrandr}/bin/xrandr --query | grep " connected" | cut -d" " -f1); do
   	MONITOR=$m ${pkgs.polybar}/bin/polybar --reload mybar &
     done
   else

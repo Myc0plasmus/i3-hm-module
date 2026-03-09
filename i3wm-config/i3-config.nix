@@ -147,7 +147,7 @@ in
     feh
 
     #utils
-    xorg.setxkbmap
+    setxkbmap
 
     #locking screen
     maim
@@ -174,7 +174,7 @@ in
     upower
     pavucontrol
     # xlayoutdisplay #started to break on install
-    xorg.xdpyinfo
+    xdpyinfo
     arandr
     brightnessctl
     xdg-user-dirs
