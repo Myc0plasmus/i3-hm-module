@@ -29,7 +29,7 @@
     {
       i3Module = {config, pkgs, lib, ...}:
       let
-        pkgs' = mkPkgs pkgs.system;
+        pkgs' = mkPkgs pkgs.stdenv.hostPlatform.system;
       in
       import ./i3wm-module.nix {
         inherit  config pkgs lib inputs;

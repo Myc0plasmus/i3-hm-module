@@ -15,9 +15,9 @@ let
   resetWallpaperLock = import ./scripts/resetWallpaperLock.nix { inherit pkgs; };
 in
 {
-  # _module.args = {
-  #   inherit internalPkgs;
-  # };
+  _module.args = {
+    inherit internalPkgs;
+  };
 
   imports = [
     ./i3wm-config/i3-config.nix
