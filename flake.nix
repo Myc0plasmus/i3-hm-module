@@ -3,7 +3,7 @@
 
   inputs = {
     # nixpkgs.url = "github:/nixos/nixpkgs?ref=nixos-unstable"; # Technically not needed, nixpkgs not used directly
-    nixpkgs.url = "github:nixos/nixpkgs/9dcb002ca1690658be4a04645215baea8b95f31d"; #for clipit
+    nixpkgs.url = "github:nixos/nixpkgs/c0b0e0fddf73fd517c3471e546c0df87a42d53f4"; #for clipit
     polybar-spotify = {
       url = "github:PrayagS/polybar-spotify";
       flake = false;
@@ -33,7 +33,7 @@
       in
       import ./i3wm-module.nix {
         inherit  config pkgs lib inputs;
-        internalPkgs = mkPkgs pkgs';
+        internalPkgs = pkgs';
       };
     };
 }
