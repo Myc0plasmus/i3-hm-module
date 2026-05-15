@@ -3,6 +3,7 @@
   protoHost,
   pkgs,
   lib,
+  internalPkgs, 
   ...
 }:
 
@@ -159,7 +160,7 @@ in
 
     #services
     dunst # popup notification
-    clipit # clipboard manager applet
+    internalPkgs.clipit # clipboard manager applet
     blueman
     bluez
     networkmanager-openvpn
@@ -174,7 +175,7 @@ in
     upower
     pavucontrol
     # xlayoutdisplay #started to break on install
-    xdpyinfo
+    # xdpyinfo
     arandr
     brightnessctl
     xdg-user-dirs
