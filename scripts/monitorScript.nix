@@ -29,14 +29,17 @@ pkgs.writeShellScriptBin "monitorScript" ''
   laptop_layout() {
     INTERNAL="eDP-1"
 
-    HDMI=$(xrandr | awk '/^HDMI-[0-9]+ connected/{print $1; exit}')
+    # HDMI=$(xrandr | awk '/^HDMI-[0-9]+ connected/{print $1; exit}')
+    HDMI="HDMI-1"
 
-    if [ -n "$HDMI" ]; then
+    if is_connected "$HDMI"; then
         xrandr \
             --output "$HDMI" --auto --primary \
             --output "$INTERNAL" --auto --below "$HDMI"
     else
-        xrandr --output "$INTERNAL" --auto --primary
+        xrandr \
+            --output "$HDMI" --off
+            --output "$INTERNAL" --auto --primary
     fi
   }
 
