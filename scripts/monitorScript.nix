@@ -38,7 +38,7 @@ pkgs.writeShellScriptBin "monitorScript" ''
             --output "$INTERNAL" --auto --below "$HDMI"
     else
         xrandr \
-            --output "$HDMI" --off
+            --output "$HDMI" --off \
             --output "$INTERNAL" --auto --primary
     fi
   }
