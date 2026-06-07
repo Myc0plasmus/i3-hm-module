@@ -35,6 +35,12 @@ let
       sm="HDMI-1";
       tm="";
     };
+    nanoarchaeum = {
+      fm="HDMI-A-1";
+      sm="HDMI-A-2";
+      tm="";
+    };
+
   };
   fm = userDisplays.${protoHost.username}.fm;
   sm = userDisplays.${protoHost.username}.sm;
@@ -85,6 +91,48 @@ let
     ];
 
     myc0plasmus = [
+      {
+        workspace = "1";
+        output = sm;
+      }
+      {
+        workspace = "2";
+        output = fm;
+      }
+      {
+        workspace = "3";
+        output = sm;
+      }
+      {
+        workspace = "4";
+        output = fm;
+      }
+      {
+        workspace = "5";
+        output = sm;
+      }
+      {
+        workspace = "6";
+        output = fm;
+      }
+      {
+        workspace = "7";
+        output = sm;
+      }
+      {
+        workspace = "8";
+        output = fm;
+      }
+      {
+        workspace = "9";
+        output = sm;
+      }
+      {
+        workspace = "10";
+        output = fm;
+      }
+    ];
+    nanoarchaeum = [
       {
         workspace = "1";
         output = sm;

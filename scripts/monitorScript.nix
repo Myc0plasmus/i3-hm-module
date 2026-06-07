@@ -26,6 +26,16 @@ pkgs.writeShellScriptBin "monitorScript" ''
       xrandr | grep -q "^$1 connected"
   }
 
+  pi_layout() {
+    if is_connected "HDMI-A-2"; then
+        xrandr \
+            --output "HDMI-A-2" --auto --below "HDMI-A-1"
+    else
+        xrandr \
+            --output "HDMI-A-2" --off \
+            --output "HDMI-A-1" --auto --primary
+  }
+
   laptop_layout() {
     INTERNAL="eDP-1"
 
@@ -77,8 +87,11 @@ pkgs.writeShellScriptBin "monitorScript" ''
     cordyceps)
         pc_layout
         ;;
+    nanoarchaeum)
+        pi_layout
+        ;;
     *)
-        echo "Usage: $0 {laptop|pc}"
+        echo "Usage: $0 {laptop|pc|pi}"
         exit 1
         ;;
     esac
