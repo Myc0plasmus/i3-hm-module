@@ -34,6 +34,7 @@ pkgs.writeShellScriptBin "monitorScript" ''
         xrandr \
             --output "HDMI-A-2" --off \
             --output "HDMI-A-1" --auto --primary
+    fi
   }
 
   laptop_layout() {
