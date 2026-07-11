@@ -224,7 +224,7 @@ in
     pavucontrol
     # xlayoutdisplay #started to break on install
     # xdpyinfo
-    arandr
+    internalPkgs.arandr
     brightnessctl
     xdg-user-dirs
     swaytools
