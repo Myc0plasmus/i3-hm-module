@@ -186,7 +186,6 @@ in
 {
   home.packages = with pkgs; [
     rot8
-    dracula-theme
     glib
 
     #terminal emulator
