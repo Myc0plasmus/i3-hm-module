@@ -215,7 +215,6 @@ in
     polkit_gnome
     polkit
     playerctl
-    zscroll
 
     # settings
     pulsemixer
