@@ -34,7 +34,7 @@ in
     launchPolybar
     resetWallpaperLock
 
-    internalPkgs.brave
+    pkgs.brave
     pkgs.ripgrep
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
