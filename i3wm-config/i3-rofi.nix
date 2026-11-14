@@ -13,7 +13,9 @@
   ];
   programs.rofi = {
     enable = true;
-    terminal = "kitty";
+    settings = {
+      terminal = "kitty";
+    };
     plugins = [
       pkgs.rofi-vpn
       pkgs.rofi-bluetooth
