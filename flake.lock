@@ -35,11 +35,11 @@
     "polybar-scripts": {
       "flake": false,
       "locked": {
-        "lastModified": 1758698806,
-        "narHash": "sha256-u2u/eAoe4ryMjauby0YESujSWzyraIjf4TrRsj+tQnM=",
+        "lastModified": 1794474653,
+        "narHash": "sha256-gWvSgJeQanlDGREpFXn0TOi1okmSOI1uhhgzcNfQWWo=",
         "owner": "polybar",
         "repo": "polybar-scripts",
-        "rev": "d045caa277ab904ca10ffdee4173b6e10c59c298",
+        "rev": "a7eb4fc7a9d5941357db3f040731bc9ab220b9fe",
         "type": "github"
       },
       "original": {
