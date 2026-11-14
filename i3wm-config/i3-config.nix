@@ -212,7 +212,6 @@ in
     bluez
     networkmanager-openvpn
     networkmanagerapplet
-    syncthingtray
     polkit_gnome
     polkit
     playerctl
@@ -403,11 +402,6 @@ in
         }
         {
           command = "blueman-applet";
-          always = false;
-          notification = false;
-        }
-        {
-          command = "syncthingtray";
           always = false;
           notification = false;
         }
