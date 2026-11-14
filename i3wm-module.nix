@@ -23,6 +23,7 @@ in
     ./i3wm-config/i3-config.nix
     ./i3wm-config/polybar.nix
     ./i3wm-config/i3-rofi.nix
+    ./i3wm-config/syncthingtray.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
