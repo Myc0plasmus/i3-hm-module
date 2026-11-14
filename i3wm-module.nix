@@ -36,6 +36,7 @@ in
 
     internalPkgs.brave
     pkgs.ripgrep
+    internalPkgs.zscroll
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
